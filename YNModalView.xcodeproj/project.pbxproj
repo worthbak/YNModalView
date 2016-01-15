@@ -13,6 +13,7 @@
 		382E36861C49AE5D001E9539 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36851C49AE5D001E9539 /* Curry.framework */; };
 		382E36891C49AE83001E9539 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36871C49AE83001E9539 /* Nimble.framework */; };
 		382E368A1C49AE83001E9539 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36881C49AE83001E9539 /* Quick.framework */; };
+		382E368D1C49B608001E9539 /* YNModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E368C1C49B608001E9539 /* YNModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		382E36851C49AE5D001E9539 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
 		382E36871C49AE83001E9539 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		382E36881C49AE83001E9539 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
+		382E368C1C49B608001E9539 /* YNModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				382E365F1C49AA3C001E9539 /* YNModalView.h */,
 				382E36611C49AA3C001E9539 /* Info.plist */,
+				382E368C1C49B608001E9539 /* YNModalView.swift */,
 			);
 			path = YNModalView;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382E368D1C49B608001E9539 /* YNModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +332,7 @@
 		382E36711C49AA3C001E9539 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -338,12 +343,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		382E36721C49AA3C001E9539 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
