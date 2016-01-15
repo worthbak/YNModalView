@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		382E36601C49AA3C001E9539 /* YNModalView.h in Headers */ = {isa = PBXBuildFile; fileRef = 382E365F1C49AA3C001E9539 /* YNModalView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		382E36671C49AA3C001E9539 /* YNModalView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E365C1C49AA3C001E9539 /* YNModalView.framework */; };
+		382E366C1C49AA3C001E9539 /* YNModalViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E366B1C49AA3C001E9539 /* YNModalViewTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		382E36681C49AA3C001E9539 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 382E36531C49AA3C001E9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 382E365B1C49AA3C001E9539;
+			remoteInfo = YNModalView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		382E365C1C49AA3C001E9539 /* YNModalView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YNModalView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		382E365F1C49AA3C001E9539 /* YNModalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNModalView.h; sourceTree = "<group>"; };
+		382E36611C49AA3C001E9539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		382E36661C49AA3C001E9539 /* YNModalViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YNModalViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		382E366B1C49AA3C001E9539 /* YNModalViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNModalViewTests.swift; sourceTree = "<group>"; };
+		382E366D1C49AA3C001E9539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		382E36581C49AA3C001E9539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382E36631C49AA3C001E9539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				382E36671C49AA3C001E9539 /* YNModalView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		382E36521C49AA3C001E9539 = {
+			isa = PBXGroup;
+			children = (
+				382E365E1C49AA3C001E9539 /* YNModalView */,
+				382E366A1C49AA3C001E9539 /* YNModalViewTests */,
+				382E365D1C49AA3C001E9539 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		382E365D1C49AA3C001E9539 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				382E365C1C49AA3C001E9539 /* YNModalView.framework */,
+				382E36661C49AA3C001E9539 /* YNModalViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		382E365E1C49AA3C001E9539 /* YNModalView */ = {
+			isa = PBXGroup;
+			children = (
+				382E365F1C49AA3C001E9539 /* YNModalView.h */,
+				382E36611C49AA3C001E9539 /* Info.plist */,
+			);
+			path = YNModalView;
+			sourceTree = "<group>";
+		};
+		382E366A1C49AA3C001E9539 /* YNModalViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				382E366B1C49AA3C001E9539 /* YNModalViewTests.swift */,
+				382E366D1C49AA3C001E9539 /* Info.plist */,
+			);
+			path = YNModalViewTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		382E36591C49AA3C001E9539 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				382E36601C49AA3C001E9539 /* YNModalView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		382E365B1C49AA3C001E9539 /* YNModalView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 382E36701C49AA3C001E9539 /* Build configuration list for PBXNativeTarget "YNModalView" */;
+			buildPhases = (
+				382E36571C49AA3C001E9539 /* Sources */,
+				382E36581C49AA3C001E9539 /* Frameworks */,
+				382E36591C49AA3C001E9539 /* Headers */,
+				382E365A1C49AA3C001E9539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YNModalView;
+			productName = YNModalView;
+			productReference = 382E365C1C49AA3C001E9539 /* YNModalView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		382E36651C49AA3C001E9539 /* YNModalViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 382E36731C49AA3C001E9539 /* Build configuration list for PBXNativeTarget "YNModalViewTests" */;
+			buildPhases = (
+				382E36621C49AA3C001E9539 /* Sources */,
+				382E36631C49AA3C001E9539 /* Frameworks */,
+				382E36641C49AA3C001E9539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				382E36691C49AA3C001E9539 /* PBXTargetDependency */,
+			);
+			name = YNModalViewTests;
+			productName = YNModalViewTests;
+			productReference = 382E36661C49AA3C001E9539 /* YNModalViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		382E36531C49AA3C001E9539 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Worth Baker";
+				TargetAttributes = {
+					382E365B1C49AA3C001E9539 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					382E36651C49AA3C001E9539 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 382E36561C49AA3C001E9539 /* Build configuration list for PBXProject "YNModalView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 382E36521C49AA3C001E9539;
+			productRefGroup = 382E365D1C49AA3C001E9539 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				382E365B1C49AA3C001E9539 /* YNModalView */,
+				382E36651C49AA3C001E9539 /* YNModalViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		382E365A1C49AA3C001E9539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382E36641C49AA3C001E9539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		382E36571C49AA3C001E9539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382E36621C49AA3C001E9539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				382E366C1C49AA3C001E9539 /* YNModalViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		382E36691C49AA3C001E9539 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 382E365B1C49AA3C001E9539 /* YNModalView */;
+			targetProxy = 382E36681C49AA3C001E9539 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		382E366E1C49AA3C001E9539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		382E366F1C49AA3C001E9539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		382E36711C49AA3C001E9539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YNModalView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		382E36721C49AA3C001E9539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YNModalView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		382E36741C49AA3C001E9539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YNModalViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		382E36751C49AA3C001E9539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YNModalViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		382E36561C49AA3C001E9539 /* Build configuration list for PBXProject "YNModalView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				382E366E1C49AA3C001E9539 /* Debug */,
+				382E366F1C49AA3C001E9539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		382E36701C49AA3C001E9539 /* Build configuration list for PBXNativeTarget "YNModalView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				382E36711C49AA3C001E9539 /* Debug */,
+				382E36721C49AA3C001E9539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		382E36731C49AA3C001E9539 /* Build configuration list for PBXNativeTarget "YNModalViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				382E36741C49AA3C001E9539 /* Debug */,
+				382E36751C49AA3C001E9539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 382E36531C49AA3C001E9539 /* Project object */;
+}
