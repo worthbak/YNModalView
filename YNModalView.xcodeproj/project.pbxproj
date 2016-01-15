@@ -10,6 +10,9 @@
 		382E36601C49AA3C001E9539 /* YNModalView.h in Headers */ = {isa = PBXBuildFile; fileRef = 382E365F1C49AA3C001E9539 /* YNModalView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382E36671C49AA3C001E9539 /* YNModalView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E365C1C49AA3C001E9539 /* YNModalView.framework */; };
 		382E366C1C49AA3C001E9539 /* YNModalViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E366B1C49AA3C001E9539 /* YNModalViewTests.swift */; };
+		382E36861C49AE5D001E9539 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36851C49AE5D001E9539 /* Curry.framework */; };
+		382E36891C49AE83001E9539 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36871C49AE83001E9539 /* Nimble.framework */; };
+		382E368A1C49AE83001E9539 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36881C49AE83001E9539 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		382E36661C49AA3C001E9539 /* YNModalViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YNModalViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382E366B1C49AA3C001E9539 /* YNModalViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNModalViewTests.swift; sourceTree = "<group>"; };
 		382E366D1C49AA3C001E9539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		382E36851C49AE5D001E9539 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
+		382E36871C49AE83001E9539 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
+		382E36881C49AE83001E9539 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382E36861C49AE5D001E9539 /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382E36891C49AE83001E9539 /* Nimble.framework in Frameworks */,
+				382E368A1C49AE83001E9539 /* Quick.framework in Frameworks */,
 				382E36671C49AA3C001E9539 /* YNModalView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				382E365E1C49AA3C001E9539 /* YNModalView */,
+				382E368B1C49AF10001E9539 /* Frameworks */,
 				382E366A1C49AA3C001E9539 /* YNModalViewTests */,
 				382E365D1C49AA3C001E9539 /* Products */,
 			);
@@ -84,6 +94,16 @@
 				382E366D1C49AA3C001E9539 /* Info.plist */,
 			);
 			path = YNModalViewTests;
+			sourceTree = "<group>";
+		};
+		382E368B1C49AF10001E9539 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				382E36871C49AE83001E9539 /* Nimble.framework */,
+				382E36881C49AE83001E9539 /* Quick.framework */,
+				382E36851C49AE5D001E9539 /* Curry.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +360,7 @@
 		382E36741C49AA3C001E9539 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = YNModalViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalViewTests;
@@ -350,6 +371,7 @@
 		382E36751C49AA3C001E9539 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = YNModalViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalViewTests;
@@ -376,6 +398,7 @@
 				382E36721C49AA3C001E9539 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		382E36731C49AA3C001E9539 /* Build configuration list for PBXNativeTarget "YNModalViewTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +407,7 @@
 				382E36751C49AA3C001E9539 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
