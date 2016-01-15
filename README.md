@@ -7,3 +7,7 @@ Architecturally, the library will know how to present a view inside of another v
 Open questions: 
 * How will the presenting view be modified? Ideally it will be dimmed, or have a froste-glass effect - will YNModalView know anything about that? 
 * How will it animate in? Can that animation be customized (via a YNModalViewDelegate)? 
+
+## Mockup:
+
+![alt tag](https://raw.githubusercontent.com/worthbak/YNModalView/boomview_search.png)
