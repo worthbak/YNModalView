@@ -10,4 +10,4 @@ Open questions:
 
 ## Mockup:
 
-![alt tag](https://raw.githubusercontent.com/worthbak/YNModalView/boomview_search.png)
+![alt tag](https://raw.githubusercontent.com/worthbak/YNModalView/master/boomview_search.png)
