@@ -11,7 +11,7 @@ import YNModalView
 
 class ViewController: UIViewController {
   
-  lazy var arrowBackground: UIImageView = {
+  lazy var arrowBackgroundView: UIImageView = {
     let arrowImage = UIImage(named: "arrows")
     let arrowView = UIImageView(image: arrowImage)
     arrowView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,35 +19,47 @@ class ViewController: UIViewController {
     return arrowView
   }()
   
+  lazy var exampleLabel: UILabel = {
+    let label = UILabel()
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.text = "Tap Here!"
+    
+    return label
+  }()
+  
+  lazy var exampleButton: UIButton = {
+    let exampleButton = UIButton(type: .System)
+    exampleButton.translatesAutoresizingMaskIntoConstraints = false
+    exampleButton.setTitle("Present View", forState: .Normal)
+    exampleButton.addTarget(self, action: "showTapped:", forControlEvents: .TouchUpInside)
+    
+    return exampleButton
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.title = "Example View"
     
     self.view.backgroundColor = .whiteColor()
-    self.view.addSubview(self.arrowBackground)
-    self.arrowBackground.topAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.topAnchor).active = true
-    self.arrowBackground.leadingAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.leadingAnchor).active = true
-    self.arrowBackground.trailingAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.trailingAnchor).active = true
-    self.arrowBackground.bottomAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.bottomAnchor).active = true
+    self.view.addSubview(self.arrowBackgroundView)
+    self.arrowBackgroundView.topAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.topAnchor).active = true
+    self.arrowBackgroundView.leadingAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.leadingAnchor).active = true
+    self.arrowBackgroundView.trailingAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.trailingAnchor).active = true
+    self.arrowBackgroundView.bottomAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.bottomAnchor).active = true
     
-    let funButton = UIButton(type: .System)
-    funButton.translatesAutoresizingMaskIntoConstraints = false
-    funButton.setTitle("show", forState: .Normal)
-    funButton.addTarget(self, action: "showTapped:", forControlEvents: .TouchUpInside)
+    self.view.addSubview(self.exampleButton)
+    self.exampleButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+    self.exampleButton.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
     
-    self.view.addSubview(funButton)
-    funButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-    funButton.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+    self.view.addSubview(self.exampleLabel)
+    self.exampleLabel.bottomAnchor.constraintEqualToAnchor(self.exampleButton.topAnchor).active = true
+    self.exampleLabel.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
   }
   
   func showTapped(sender: AnyObject?) {
-    let modalfun = YNModalView()
-    self.presentViewController(modalfun, animated: true, completion: nil)
+    let modalViewController = YNModalViewController()
+    self.presentViewController(modalViewController, animated: true, completion: nil)
   }
   
   

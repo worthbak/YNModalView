@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class YNModalView: UIViewController {
+public class YNModalViewController: UIViewController {
   
   public lazy var doneButton: UIButton = {
     let doneButton = UIButton(type: .System)

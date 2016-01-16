@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let viewController = ViewController()
     let navController = UINavigationController(rootViewController: viewController)
-    navController.title = "Example View"
     
     window?.rootViewController = navController
     window?.makeKeyAndVisible()
