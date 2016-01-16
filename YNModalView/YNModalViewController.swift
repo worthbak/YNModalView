@@ -10,14 +10,13 @@ import UIKit
 
 public class YNModalViewController: UIViewController {
   
+  var modalView: UIView!
+  
   public lazy var doneButton: UIButton = {
     let doneButton = UIButton(type: .System)
     doneButton.setTitle("Dismiss", forState: .Normal)
     doneButton.translatesAutoresizingMaskIntoConstraints = false
-    
-    self.view.addSubview(doneButton)
-    doneButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-    doneButton.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+    doneButton.addTarget(self, action: "dismissTapped:", forControlEvents: .TouchUpInside)
     
     return doneButton
   }()
@@ -25,8 +24,23 @@ public class YNModalViewController: UIViewController {
   public override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.view.backgroundColor = .blueColor()
-    self.doneButton.addTarget(self, action: "dismissTapped:", forControlEvents: .TouchUpInside)
+    self.view.backgroundColor = .clearColor()
+//    self.definesPresentationContext = true
+//    self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+    
+    self.modalView = UIView(frame: .zero)
+    self.modalView.backgroundColor = .greenColor()
+    self.modalView.translatesAutoresizingMaskIntoConstraints = false
+    
+    self.view.addSubview(self.modalView)
+    self.modalView.heightAnchor.constraintEqualToConstant(300).active = true
+    self.modalView.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, constant: -30).active = true
+    self.modalView.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+    self.modalView.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+    
+    self.modalView.addSubview(doneButton)
+    doneButton.centerXAnchor.constraintEqualToAnchor(self.modalView.centerXAnchor).active = true
+    doneButton.centerYAnchor.constraintEqualToAnchor(self.modalView.centerYAnchor).active = true
   }
   
   func dismissTapped(sender: AnyObject?) {

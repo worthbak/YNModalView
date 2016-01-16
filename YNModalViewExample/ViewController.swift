@@ -59,6 +59,8 @@ class ViewController: UIViewController {
   
   func showTapped(sender: AnyObject?) {
     let modalViewController = YNModalViewController()
+    // obviously need this to be in YNModalViewController - override init
+    modalViewController.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
     self.presentViewController(modalViewController, animated: true, completion: nil)
   }
   

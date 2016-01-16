@@ -17,7 +17,6 @@
 		382E36B31C49BDF6001E9539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E36B21C49BDF6001E9539 /* AppDelegate.swift */; };
 		382E36B51C49BDF6001E9539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E36B41C49BDF6001E9539 /* ViewController.swift */; };
 		382E36BA1C49BDF6001E9539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 382E36B91C49BDF6001E9539 /* Assets.xcassets */; };
-		382E36C21C4AEE48001E9539 /* YNModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E368C1C49B608001E9539 /* YNModalViewController.swift */; };
 		382E36C51C4AF529001E9539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382E36C41C4AF529001E9539 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -297,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				382E36B51C49BDF6001E9539 /* ViewController.swift in Sources */,
-				382E36C21C4AEE48001E9539 /* YNModalViewController.swift in Sources */,
 				382E36B31C49BDF6001E9539 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
