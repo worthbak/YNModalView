@@ -25,7 +25,7 @@ public class YNModalView: UIViewController {
   public override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.view.backgroundColor = .greenColor()
+    self.view.backgroundColor = .blueColor()
     self.doneButton.addTarget(self, action: "dismissTapped:", forControlEvents: .TouchUpInside)
   }
   
