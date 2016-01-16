@@ -21,12 +21,18 @@ public class YNModalViewController: UIViewController {
     return doneButton
   }()
   
+  public init() {
+    super.init(nibName:nil, bundle:nil)
+    
+    self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+  }
+  
+  required public init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+  
   public override func viewDidLoad() {
     super.viewDidLoad()
     
     self.view.backgroundColor = .clearColor()
-//    self.definesPresentationContext = true
-//    self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
     
     self.modalView = UIView(frame: .zero)
     self.modalView.backgroundColor = .greenColor()
