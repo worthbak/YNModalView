@@ -11,6 +11,4 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.source = { git: "https://github.com/worthbak/YNModalView.git", tag: "v#{spec.version}", submodules: true }
   spec.source_files = "YNModalView/**/*.{h,swift}"
-
-  spec.dependency "Curry", "~> 1.4.0"
 end
