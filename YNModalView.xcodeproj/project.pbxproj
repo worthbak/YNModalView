@@ -14,6 +14,11 @@
 		382E36891C49AE83001E9539 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36871C49AE83001E9539 /* Nimble.framework */; };
 		382E368A1C49AE83001E9539 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36881C49AE83001E9539 /* Quick.framework */; };
 		382E368D1C49B608001E9539 /* YNModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E368C1C49B608001E9539 /* YNModalView.swift */; };
+		382E36B31C49BDF6001E9539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E36B21C49BDF6001E9539 /* AppDelegate.swift */; };
+		382E36B51C49BDF6001E9539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E36B41C49BDF6001E9539 /* ViewController.swift */; };
+		382E36B81C49BDF6001E9539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382E36B61C49BDF6001E9539 /* Main.storyboard */; };
+		382E36BA1C49BDF6001E9539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 382E36B91C49BDF6001E9539 /* Assets.xcassets */; };
+		382E36BD1C49BDF6001E9539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382E36BB1C49BDF6001E9539 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,13 @@
 		382E36871C49AE83001E9539 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		382E36881C49AE83001E9539 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
 		382E368C1C49B608001E9539 /* YNModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNModalView.swift; sourceTree = "<group>"; };
+		382E36B01C49BDF6001E9539 /* YNModalViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNModalViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		382E36B21C49BDF6001E9539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		382E36B41C49BDF6001E9539 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		382E36B71C49BDF6001E9539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		382E36B91C49BDF6001E9539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		382E36BC1C49BDF6001E9539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		382E36BE1C49BDF6001E9539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +70,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		382E36AD1C49BDF6001E9539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		382E36521C49AA3C001E9539 = {
 			isa = PBXGroup;
 			children = (
+				382E36B11C49BDF6001E9539 /* YNModalViewExample */,
 				382E365E1C49AA3C001E9539 /* YNModalView */,
 				382E368B1C49AF10001E9539 /* Frameworks */,
 				382E366A1C49AA3C001E9539 /* YNModalViewTests */,
@@ -76,6 +96,7 @@
 			children = (
 				382E365C1C49AA3C001E9539 /* YNModalView.framework */,
 				382E36661C49AA3C001E9539 /* YNModalViewTests.xctest */,
+				382E36B01C49BDF6001E9539 /* YNModalViewExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,9 +104,9 @@
 		382E365E1C49AA3C001E9539 /* YNModalView */ = {
 			isa = PBXGroup;
 			children = (
+				382E368C1C49B608001E9539 /* YNModalView.swift */,
 				382E365F1C49AA3C001E9539 /* YNModalView.h */,
 				382E36611C49AA3C001E9539 /* Info.plist */,
-				382E368C1C49B608001E9539 /* YNModalView.swift */,
 			);
 			path = YNModalView;
 			sourceTree = "<group>";
@@ -107,6 +128,19 @@
 				382E36851C49AE5D001E9539 /* Curry.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		382E36B11C49BDF6001E9539 /* YNModalViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				382E36B21C49BDF6001E9539 /* AppDelegate.swift */,
+				382E36B41C49BDF6001E9539 /* ViewController.swift */,
+				382E36B61C49BDF6001E9539 /* Main.storyboard */,
+				382E36B91C49BDF6001E9539 /* Assets.xcassets */,
+				382E36BB1C49BDF6001E9539 /* LaunchScreen.storyboard */,
+				382E36BE1C49BDF6001E9539 /* Info.plist */,
+			);
+			path = YNModalViewExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +193,23 @@
 			productReference = 382E36661C49AA3C001E9539 /* YNModalViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		382E36AF1C49BDF6001E9539 /* YNModalViewExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 382E36BF1C49BDF6001E9539 /* Build configuration list for PBXNativeTarget "YNModalViewExample" */;
+			buildPhases = (
+				382E36AC1C49BDF6001E9539 /* Sources */,
+				382E36AD1C49BDF6001E9539 /* Frameworks */,
+				382E36AE1C49BDF6001E9539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YNModalViewExample;
+			productName = YNModalViewExample;
+			productReference = 382E36B01C49BDF6001E9539 /* YNModalViewExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +226,9 @@
 					382E36651C49AA3C001E9539 = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					382E36AF1C49BDF6001E9539 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = 382E36561C49AA3C001E9539 /* Build configuration list for PBXProject "YNModalView" */;
@@ -183,6 +237,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 382E36521C49AA3C001E9539;
 			productRefGroup = 382E365D1C49AA3C001E9539 /* Products */;
@@ -191,6 +246,7 @@
 			targets = (
 				382E365B1C49AA3C001E9539 /* YNModalView */,
 				382E36651C49AA3C001E9539 /* YNModalViewTests */,
+				382E36AF1C49BDF6001E9539 /* YNModalViewExample */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +263,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382E36AE1C49BDF6001E9539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				382E36BD1C49BDF6001E9539 /* LaunchScreen.storyboard in Resources */,
+				382E36BA1C49BDF6001E9539 /* Assets.xcassets in Resources */,
+				382E36B81C49BDF6001E9539 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +295,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		382E36AC1C49BDF6001E9539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				382E36B51C49BDF6001E9539 /* ViewController.swift in Sources */,
+				382E36B31C49BDF6001E9539 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -238,6 +313,25 @@
 			targetProxy = 382E36681C49AA3C001E9539 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		382E36B61C49BDF6001E9539 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				382E36B71C49BDF6001E9539 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		382E36BB1C49BDF6001E9539 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				382E36BC1C49BDF6001E9539 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		382E366E1C49AA3C001E9539 /* Debug */ = {
@@ -386,6 +480,28 @@
 			};
 			name = Release;
 		};
+		382E36C01C49BDF6001E9539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YNModalViewExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		382E36C11C49BDF6001E9539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YNModalViewExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthbak.YNModalViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +531,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		382E36BF1C49BDF6001E9539 /* Build configuration list for PBXNativeTarget "YNModalViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				382E36C01C49BDF6001E9539 /* Debug */,
+				382E36C11C49BDF6001E9539 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

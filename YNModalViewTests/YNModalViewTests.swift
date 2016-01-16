@@ -28,11 +28,6 @@ class YNModalViewTests: XCTestCase {
     XCTAssert(true)
   }
   
-  func testColorReturn() {
-    let fifteen = YNModalViewRun(15)
-    XCTAssertEqual(15, fifteen)
-  }
-  
   func testPerformanceExample() {
     // This is an example of a performance test case.
     self.measureBlock {
