@@ -7,7 +7,7 @@
 //
 
 import XCTest
-//@testable import YNModalView
+//@testable import YNModalView <- shouldn't be necessary, as everything should be public (testing the public API, of course)
 import YNModalView
 
 class YNModalViewTests: XCTestCase {

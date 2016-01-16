@@ -10,9 +10,6 @@
 		382E36601C49AA3C001E9539 /* YNModalView.h in Headers */ = {isa = PBXBuildFile; fileRef = 382E365F1C49AA3C001E9539 /* YNModalView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382E36671C49AA3C001E9539 /* YNModalView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E365C1C49AA3C001E9539 /* YNModalView.framework */; };
 		382E366C1C49AA3C001E9539 /* YNModalViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E366B1C49AA3C001E9539 /* YNModalViewTests.swift */; };
-		382E36861C49AE5D001E9539 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36851C49AE5D001E9539 /* Curry.framework */; };
-		382E36891C49AE83001E9539 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36871C49AE83001E9539 /* Nimble.framework */; };
-		382E368A1C49AE83001E9539 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382E36881C49AE83001E9539 /* Quick.framework */; };
 		382E368D1C49B608001E9539 /* YNModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E368C1C49B608001E9539 /* YNModalViewController.swift */; };
 		382E36B31C49BDF6001E9539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E36B21C49BDF6001E9539 /* AppDelegate.swift */; };
 		382E36B51C49BDF6001E9539 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E36B41C49BDF6001E9539 /* ViewController.swift */; };
@@ -37,9 +34,6 @@
 		382E36661C49AA3C001E9539 /* YNModalViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YNModalViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382E366B1C49AA3C001E9539 /* YNModalViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNModalViewTests.swift; sourceTree = "<group>"; };
 		382E366D1C49AA3C001E9539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		382E36851C49AE5D001E9539 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
-		382E36871C49AE83001E9539 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		382E36881C49AE83001E9539 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
 		382E368C1C49B608001E9539 /* YNModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNModalViewController.swift; sourceTree = "<group>"; };
 		382E36B01C49BDF6001E9539 /* YNModalViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNModalViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		382E36B21C49BDF6001E9539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				382E36861C49AE5D001E9539 /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				382E36891C49AE83001E9539 /* Nimble.framework in Frameworks */,
-				382E368A1C49AE83001E9539 /* Quick.framework in Frameworks */,
 				382E36671C49AA3C001E9539 /* YNModalView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,9 +112,6 @@
 		382E368B1C49AF10001E9539 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				382E36871C49AE83001E9539 /* Nimble.framework */,
-				382E36881C49AE83001E9539 /* Quick.framework */,
-				382E36851C49AE5D001E9539 /* Curry.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
