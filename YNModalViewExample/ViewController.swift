@@ -59,7 +59,8 @@ class ViewController: UIViewController {
   
   func showTapped(sender: AnyObject?) {
     let modalViewController = YNModalViewController()
-    self.presentViewController(modalViewController, animated: true, completion: nil)
+    modalViewController.presentYNModalViewControllerFromViewController(self, withCompletionHandler: nil)
+    
   }
   
   
