@@ -11,6 +11,8 @@ import YNModalView
 
 class ViewController: UIViewController {
   
+  var presentedModalViewController: YNModalViewController?
+  
   lazy var arrowBackgroundView: UIImageView = {
     let arrowImage = UIImage(named: "arrows")
     let arrowView = UIImageView(image: arrowImage)
@@ -27,11 +29,20 @@ class ViewController: UIViewController {
     return label
   }()
   
-  lazy var exampleButton: UIButton = {
+  lazy var defaultButton: UIButton = {
     let exampleButton = UIButton(type: .System)
     exampleButton.translatesAutoresizingMaskIntoConstraints = false
-    exampleButton.setTitle("Present View", forState: .Normal)
-    exampleButton.addTarget(self, action: "showTapped:", forControlEvents: .TouchUpInside)
+    exampleButton.setTitle("Default View", forState: .Normal)
+    exampleButton.addTarget(self, action: "showDefaultTapped:", forControlEvents: .TouchUpInside)
+    
+    return exampleButton
+  }()
+  
+  lazy var customButton: UIButton = {
+    let exampleButton = UIButton(type: .System)
+    exampleButton.translatesAutoresizingMaskIntoConstraints = false
+    exampleButton.setTitle("Custom View", forState: .Normal)
+    exampleButton.addTarget(self, action: "showCustomTapped:", forControlEvents: .TouchUpInside)
     
     return exampleButton
   }()
@@ -48,21 +59,47 @@ class ViewController: UIViewController {
     self.arrowBackgroundView.trailingAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.trailingAnchor).active = true
     self.arrowBackgroundView.bottomAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.bottomAnchor).active = true
     
-    self.view.addSubview(self.exampleButton)
-    self.exampleButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-    self.exampleButton.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
+    self.view.addSubview(self.defaultButton)
+    self.defaultButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
+    self.defaultButton.centerYAnchor.constraintEqualToAnchor(self.view.centerYAnchor).active = true
     
     self.view.addSubview(self.exampleLabel)
-    self.exampleLabel.bottomAnchor.constraintEqualToAnchor(self.exampleButton.topAnchor).active = true
+    self.exampleLabel.bottomAnchor.constraintEqualToAnchor(self.defaultButton.topAnchor).active = true
     self.exampleLabel.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
-  }
-  
-  func showTapped(sender: AnyObject?) {
-    let modalViewController = YNModalViewController()
-    modalViewController.presentYNModalViewControllerFromViewController(self, withCompletionHandler: nil)
     
+    self.view.addSubview(self.customButton)
+    self.customButton.topAnchor.constraintEqualToAnchor(self.defaultButton.bottomAnchor).active = true
+    self.customButton.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
   }
   
+  func showDefaultTapped(sender: AnyObject?) {
+    let modalViewController = YNModalViewController()
+    modalViewController.presentFromViewController(self)
+  }
+  
+  func showCustomTapped(sender: AnyObject?) {
+    let customView = UIView(frame: .zero)
+    customView.backgroundColor = .orangeColor()
+    customView.translatesAutoresizingMaskIntoConstraints = false
+    
+    let dismissButton = UIButton(type: .System)
+    dismissButton.translatesAutoresizingMaskIntoConstraints = false
+    dismissButton.setTitle("dismiss", forState: .Normal)
+    dismissButton.addTarget(self, action: "dismiss:", forControlEvents: .TouchUpInside)
+    
+    customView.addSubview(dismissButton)
+    dismissButton.centerXAnchor.constraintEqualToAnchor(customView.centerXAnchor).active = true
+    dismissButton.centerYAnchor.constraintEqualToAnchor(customView.centerYAnchor).active = true
+    
+    self.presentedModalViewController = YNModalViewController(withCustomView: customView, andSize: CGSizeMake(300, 300))
+    self.presentedModalViewController?.presentFromViewController(self)
+  }
+  
+  func dismiss(sender: AnyObject?) {
+    if let viewCon = self.presentedModalViewController {
+      viewCon.dismiss()
+    }
+  }
   
 }
 
