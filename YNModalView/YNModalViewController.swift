@@ -104,8 +104,9 @@ public class YNModalViewController: UIViewController {
     let rawAnimationCurve = (userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber)!.unsignedIntValue << 16
     let animationCurve = UIViewAnimationOptions(rawValue: UInt(rawAnimationCurve))
     
+    let keyboardOffset = -(CGRectGetMaxY(view.bounds) - CGRectGetMinY(convertedKeyboardEndFrame)) - 8
     self.modalViewBottomConstraint?.active = false
-    self.modalViewBottomConstraint = self.modalView.bottomAnchor.constraintLessThanOrEqualToAnchor(self.view.bottomAnchor, constant: -(CGRectGetMaxY(view.bounds) - CGRectGetMinY(convertedKeyboardEndFrame)) - 8)
+    self.modalViewBottomConstraint = self.modalView.bottomAnchor.constraintLessThanOrEqualToAnchor(self.view.bottomAnchor, constant: keyboardOffset)
     self.modalViewBottomConstraint?.active = true
     
     UIView.animateWithDuration(animationDuration!, delay: 0.0, options: [.BeginFromCurrentState, animationCurve], animations: {
