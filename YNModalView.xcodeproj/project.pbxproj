@@ -16,6 +16,8 @@
 		382E36BA1C49BDF6001E9539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 382E36B91C49BDF6001E9539 /* Assets.xcassets */; };
 		382E36C51C4AF529001E9539 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382E36C41C4AF529001E9539 /* LaunchScreen.storyboard */; };
 		38CC3B5B1C4B2C56003552D3 /* YNModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E368C1C49B608001E9539 /* YNModalViewController.swift */; };
+		38FA4D7E1C4DEEDA001F8438 /* ContenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA4D7D1C4DEEDA001F8438 /* ContenView.swift */; };
+		38FA4D801C4DEFA3001F8438 /* ContenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA4D7D1C4DEEDA001F8438 /* ContenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 		382E36B91C49BDF6001E9539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		382E36BE1C49BDF6001E9539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382E36C41C4AF529001E9539 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38FA4D7D1C4DEEDA001F8438 /* ContenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				382E368C1C49B608001E9539 /* YNModalViewController.swift */,
+				38FA4D7D1C4DEEDA001F8438 /* ContenView.swift */,
 				382E365F1C49AA3C001E9539 /* YNModalView.h */,
 				382E36611C49AA3C001E9539 /* Info.plist */,
 			);
@@ -269,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382E368D1C49B608001E9539 /* YNModalViewController.swift in Sources */,
+				38FA4D7E1C4DEEDA001F8438 /* ContenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382E36B51C49BDF6001E9539 /* ViewController.swift in Sources */,
+				38FA4D801C4DEFA3001F8438 /* ContenView.swift in Sources */,
 				382E36B31C49BDF6001E9539 /* AppDelegate.swift in Sources */,
 				38CC3B5B1C4B2C56003552D3 /* YNModalViewController.swift in Sources */,
 			);
