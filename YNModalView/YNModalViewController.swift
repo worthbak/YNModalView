@@ -23,7 +23,7 @@ public class YNModalViewController: UIViewController {
   }()
   
   var modalViewTopConstraint: NSLayoutConstraint?
-  var modalViewCenterYConstraint: NSLayoutConstraint?
+  var modalViewBottomConstraint: NSLayoutConstraint?
   
   public convenience init() {
     self.init(withCustomView: ContentView(frame: .zero))
@@ -55,17 +55,62 @@ public class YNModalViewController: UIViewController {
     self.effectView.trailingAnchor.constraintEqualToAnchor(self.view.trailingAnchor).active = true
     self.effectView.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
     
+    let heightAnchor: NSLayoutConstraint
     self.view.addSubview(self.modalView)
     if let size = self.modalViewSize {
-      self.modalView.heightAnchor.constraintEqualToConstant(size.height).active = true
+      heightAnchor = self.modalView.heightAnchor.constraintEqualToConstant(size.height)
       self.modalView.widthAnchor.constraintEqualToConstant(size.width).active = true
     } else {
-      self.modalView.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor, constant: -60).active = true
+      heightAnchor = self.modalView.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor, constant: -60)
       self.modalView.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor, constant: -30).active = true
     }
+    heightAnchor.priority = 750
+    heightAnchor.active = true
+    
     self.modalView.centerXAnchor.constraintEqualToAnchor(self.view.centerXAnchor).active = true
     self.modalViewTopConstraint = self.modalView.topAnchor.constraintEqualToAnchor(self.view.bottomAnchor)
     self.modalViewTopConstraint?.active = true
+  }
+  
+  public override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+  }
+  
+  public override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+  }
+  
+  func keyboardWillShowNotification(notification: NSNotification) {
+    updateBottomLayoutConstraintWithNotification(notification)
+  }
+  
+  func keyboardWillHideNotification(notification: NSNotification) {
+    updateBottomLayoutConstraintWithNotification(notification)
+  }
+  
+  
+  // MARK: - Private
+  
+  func updateBottomLayoutConstraintWithNotification(notification: NSNotification) {
+    guard let userInfo = notification.userInfo else { return }
+    
+    let animationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
+    let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.CGRectValue()
+    let convertedKeyboardEndFrame = view.convertRect(keyboardEndFrame!, fromView: view.window)
+    let rawAnimationCurve = (userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber)!.unsignedIntValue << 16
+    let animationCurve = UIViewAnimationOptions(rawValue: UInt(rawAnimationCurve))
+    
+    self.modalViewBottomConstraint?.active = false
+    self.modalViewBottomConstraint = self.modalView.bottomAnchor.constraintLessThanOrEqualToAnchor(self.view.bottomAnchor, constant: -(CGRectGetMaxY(view.bounds) - CGRectGetMinY(convertedKeyboardEndFrame)) - 8)
+    self.modalViewBottomConstraint?.active = true
+    
+    UIView.animateWithDuration(animationDuration!, delay: 0.0, options: [.BeginFromCurrentState, animationCurve], animations: {
+      self.view.layoutIfNeeded()
+      }, completion: nil)
   }
   
   public func presentFromViewController(viewController: UIViewController, withCompletionHandler completionHandler: (() -> Void)? = nil) {
@@ -80,6 +125,10 @@ public class YNModalViewController: UIViewController {
         self.modalViewTopConstraint?.active = false
         self.modalViewTopConstraint = self.modalView.topAnchor.constraintEqualToAnchor(self.view.layoutMarginsGuide.topAnchor, constant: 30)
         self.modalViewTopConstraint?.active = true
+        
+        // constrain the modalView to the bottom layout guide
+        self.modalViewBottomConstraint = self.modalView.bottomAnchor.constraintLessThanOrEqualToAnchor(self.view.layoutMarginsGuide.bottomAnchor)
+        self.modalViewBottomConstraint?.active = true
         
         self.view.layoutIfNeeded()
         }, completion: { done in
@@ -96,6 +145,7 @@ public class YNModalViewController: UIViewController {
       self.effectView.alpha = 0.0
       
       // Fly the modalView out of the frame
+      self.modalViewBottomConstraint?.active = false
       self.modalViewTopConstraint?.active = false
       self.modalViewTopConstraint = self.modalView.topAnchor.constraintEqualToAnchor(self.view.bottomAnchor)
       self.modalViewTopConstraint?.active = true
