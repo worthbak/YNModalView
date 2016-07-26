@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ContentViewDelegate: class {
-  func dismissButtonTapped(sender: AnyObject)
+  func dismissButtonTapped(_ sender: AnyObject)
 }
 
 class ContentView: UIView {
@@ -21,34 +21,34 @@ class ContentView: UIView {
   
   override init(frame: CGRect) {
     
-    self.doneButton = UIButton(type: .System)
-    self.doneButton.setTitle("Dismiss", forState: .Normal)
+    self.doneButton = UIButton(type: .system)
+    self.doneButton.setTitle("Dismiss", for: UIControlState())
     self.doneButton.translatesAutoresizingMaskIntoConstraints = false
     
     self.textField = UITextField()
-    self.textField.backgroundColor = .whiteColor()
+    self.textField.backgroundColor = .white()
     self.textField.translatesAutoresizingMaskIntoConstraints = false
     
     super.init(frame: frame)
     
-    self.backgroundColor = .greenColor()
+    self.backgroundColor = .green()
     self.translatesAutoresizingMaskIntoConstraints = false
     
     self.addSubview(self.doneButton)
-    self.doneButton.centerXAnchor.constraintEqualToAnchor(self.centerXAnchor).active = true
-    self.doneButton.centerYAnchor.constraintEqualToAnchor(self.centerYAnchor).active = true
-    self.doneButton.addTarget(self, action: "dismissTapped:", forControlEvents: .TouchUpInside)
+    self.doneButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    self.doneButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    self.doneButton.addTarget(self, action: #selector(ContentView.dismissTapped(_:)), for: .touchUpInside)
     
     self.addSubview(self.textField)
-    self.textField.topAnchor.constraintEqualToAnchor(self.doneButton.bottomAnchor, constant: 8).active = true
-    self.textField.centerXAnchor.constraintEqualToAnchor(self.centerXAnchor).active = true
-    self.textField.widthAnchor.constraintEqualToConstant(100).active = true
-    self.textField.heightAnchor.constraintEqualToConstant(44).active = true
+    self.textField.topAnchor.constraint(equalTo: self.doneButton.bottomAnchor, constant: 8).isActive = true
+    self.textField.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    self.textField.widthAnchor.constraint(equalToConstant: 100).isActive = true
+    self.textField.heightAnchor.constraint(equalToConstant: 44).isActive = true
   }
 
   required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
   
-  func dismissTapped(sender: AnyObject) {
+  func dismissTapped(_ sender: AnyObject) {
     self.delegate?.dismissButtonTapped(sender)
   }
   
