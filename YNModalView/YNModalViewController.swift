@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class YNModalViewController: UIViewController {
+open class YNModalViewController: UIViewController {
   
   let modalView: UIView
   let modalViewSize: CGSize?
@@ -43,10 +43,10 @@ public class YNModalViewController: UIViewController {
   
   required public init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
   
-  public override func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.view.backgroundColor = .clear()
+    self.view.backgroundColor = .clear
     
     // constrain the vibrancy view
     self.view.addSubview(self.effectView)
@@ -72,13 +72,13 @@ public class YNModalViewController: UIViewController {
     self.modalViewTopConstraint?.isActive = true
   }
   
-  public override func viewWillAppear(_ animated: Bool) {
+  open override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     NotificationCenter.default.addObserver(self, selector: #selector(YNModalViewController.keyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(YNModalViewController.keyboardWillHideNotification(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
   }
   
-  public override func viewWillDisappear(_ animated: Bool) {
+  open override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -99,7 +99,7 @@ public class YNModalViewController: UIViewController {
     guard let userInfo = (notification as NSNotification).userInfo else { return }
     
     let animationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
-    let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue()
+    let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
     let convertedKeyboardEndFrame = view.convert(keyboardEndFrame!, from: view.window)
     let rawAnimationCurve = (userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber)!.uint32Value << 16
     let animationCurve = UIViewAnimationOptions(rawValue: UInt(rawAnimationCurve))
@@ -153,11 +153,5 @@ public class YNModalViewController: UIViewController {
       
       self.view.layoutIfNeeded()
       }) { done in self.dismiss(animated: false, completion: nil) }
-  }
-}
-
-extension YNModalViewController: ContentViewDelegate {
-  func dismissButtonTapped(_ sender: AnyObject) {
-    self.dismiss()
   }
 }

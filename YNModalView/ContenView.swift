@@ -26,12 +26,12 @@ class ContentView: UIView {
     self.doneButton.translatesAutoresizingMaskIntoConstraints = false
     
     self.textField = UITextField()
-    self.textField.backgroundColor = .white()
+    self.textField.backgroundColor = .white
     self.textField.translatesAutoresizingMaskIntoConstraints = false
     
     super.init(frame: frame)
     
-    self.backgroundColor = .green()
+    self.backgroundColor = .green
     self.translatesAutoresizingMaskIntoConstraints = false
     
     self.addSubview(self.doneButton)
@@ -52,4 +52,10 @@ class ContentView: UIView {
     self.delegate?.dismissButtonTapped(sender)
   }
   
+}
+
+extension YNModalViewController: ContentViewDelegate {
+  func dismissButtonTapped(_ sender: AnyObject) {
+    self.dismiss()
+  }
 }

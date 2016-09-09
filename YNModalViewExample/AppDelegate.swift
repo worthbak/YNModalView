@@ -13,11 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
     // Override point for customization after application launch.
     
-    self.window = UIWindow(frame: UIScreen.main().bounds)
+    self.window = UIWindow(frame: UIScreen.main.bounds)
     
     let viewController = ViewController()
     let navController = UINavigationController(rootViewController: viewController)

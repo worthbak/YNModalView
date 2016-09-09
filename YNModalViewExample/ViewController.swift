@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     self.navigationItem.title = "Example View"
     
-    self.view.backgroundColor = .white()
+    self.view.backgroundColor = .white
     self.view.addSubview(self.arrowBackgroundView)
     self.arrowBackgroundView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor).isActive = true
     self.arrowBackgroundView.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor).isActive = true
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
   
   func showCustomTapped(_ sender: AnyObject?) {
     let customView = UIView(frame: .zero)
-    customView.backgroundColor = .orange()
+    customView.backgroundColor = .orange
     customView.translatesAutoresizingMaskIntoConstraints = false
     
     let dismissButton = UIButton(type: .system)
