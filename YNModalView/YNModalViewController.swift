@@ -74,8 +74,8 @@ public class YNModalViewController: UIViewController {
   
   public override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(YNModalViewController.keyboardWillShowNotification(_:)), name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(YNModalViewController.keyboardWillHideNotification(_:)), name: UIKeyboardWillHideNotification, object: nil)
   }
   
   public override func viewWillDisappear(animated: Bool) {

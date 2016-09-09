@@ -37,7 +37,7 @@ class ContentView: UIView {
     self.addSubview(self.doneButton)
     self.doneButton.centerXAnchor.constraintEqualToAnchor(self.centerXAnchor).active = true
     self.doneButton.centerYAnchor.constraintEqualToAnchor(self.centerYAnchor).active = true
-    self.doneButton.addTarget(self, action: "dismissTapped:", forControlEvents: .TouchUpInside)
+    self.doneButton.addTarget(self, action: #selector(ContentView.dismissTapped(_:)), forControlEvents: .TouchUpInside)
     
     self.addSubview(self.textField)
     self.textField.topAnchor.constraintEqualToAnchor(self.doneButton.bottomAnchor, constant: 8).active = true

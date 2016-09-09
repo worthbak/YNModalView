@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     let exampleButton = UIButton(type: .System)
     exampleButton.translatesAutoresizingMaskIntoConstraints = false
     exampleButton.setTitle("Default View", forState: .Normal)
-    exampleButton.addTarget(self, action: "showDefaultTapped:", forControlEvents: .TouchUpInside)
+    exampleButton.addTarget(self, action: #selector(ViewController.showDefaultTapped(_:)), forControlEvents: .TouchUpInside)
     
     return exampleButton
   }()
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     let exampleButton = UIButton(type: .System)
     exampleButton.translatesAutoresizingMaskIntoConstraints = false
     exampleButton.setTitle("Custom View", forState: .Normal)
-    exampleButton.addTarget(self, action: "showCustomTapped:", forControlEvents: .TouchUpInside)
+    exampleButton.addTarget(self, action: #selector(ViewController.showCustomTapped(_:)), forControlEvents: .TouchUpInside)
     
     return exampleButton
   }()
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     let dismissButton = UIButton(type: .System)
     dismissButton.translatesAutoresizingMaskIntoConstraints = false
     dismissButton.setTitle("dismiss", forState: .Normal)
-    dismissButton.addTarget(self, action: "dismiss:", forControlEvents: .TouchUpInside)
+    dismissButton.addTarget(self, action: #selector(ViewController.dismiss(_:)), forControlEvents: .TouchUpInside)
     
     customView.addSubview(dismissButton)
     dismissButton.centerXAnchor.constraintEqualToAnchor(customView.centerXAnchor).active = true
